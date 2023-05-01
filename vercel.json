@@ -1,12 +1,14 @@
 {
   "redirects": [
-    {
-      "source": "/",
-      "destination": "/main.html"
-    },
-    {
-      "source": "/:match*",
-      "destination": "https://s3.amazonaws.com/peoplestuffelearning/120625_ken11110_game/:match*"
+     {
+       "source": "/",
+       "destination": "/main.html"
+     }
+   ],
+   "rewrites": [
+     {
+       "source": "/:match*",
+       "destination": "https://s3.amazonaws.com/peoplestuffelearning/120625_ken11110_till_game/:match*"
     }
   ]
 }
