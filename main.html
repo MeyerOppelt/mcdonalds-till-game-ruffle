@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>POS 6 Till Training</title>
+		<link href="css/cranberry.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/swfobject.js"></script>
+		<script type="text/javascript">
+		/**
+		* reloads the current url, passing the topicid and screenid arguments back in as querystring parameters to allow builders
+		* to 'reload' the screen they were working on should they need to refresh the text
+		*/
+		function reloadScreen(topicid, screenid)
+		{
+			var url = location.protocol + "//" + location.pathname;
+			var qs = "topicid=" + topicid + "&screenid=" + screenid;
+			location.replace(url + "?" + qs);
+		}
+		
+		function closeWindow()
+		{
+			console.info("main.html::closeWindow");
+			results_url = "/mcdonalds/challenge/league_table.php?from_course=true";
+			window.opener.parent ? window.opener.parent.location.href = results_url : window.opener.location.href = results_url;
+			top.window.close();	
+		}
+		
+		function onShowMeComplete()
+		{
+			//console.log("main.html::onShowMeComplete");
+			document.getElementById("Base").onShowMeComplete();
+		}
+		
+		function onStepIncorrect()
+		{
+			//console.log("main.html::onStepIncorrect");
+			document.getElementById("Base").onStepIncorrect();
+		}
+
+		function onStepCorrect()
+		{
+			//console.log("main.html::onStepCorrect");
+			document.getElementById("Base").onStepCorrect();
+		}
+		
+		</script>
+	</head>
+	<body>
+		<div align="center">
+			<div id="flashContent">
+				<p><a href="http://get.adobe.com/flashplayer/"><img src="images/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var flashvars = {
+				serverPath: "/mcdonalds/challenge/add_score.php",
+				usingLMS: "false"
+			};
+		
+			var params = {
+				allowfullscreen: "true",
+				swliveconnect: "true",
+				quality: "best" /* ensure bitmap smoothing always turned on */
+			};
+			var attributes = {
+				id: "Base",
+				name: "Base"
+			};
+			swfobject.embedSWF("main.swf", "flashContent", "995", "650", "10.0.12", "express_install.swf", flashvars, params, attributes);
+		</script>
+	</body>
+</html>
