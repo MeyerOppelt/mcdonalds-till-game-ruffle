@@ -21,7 +21,7 @@
 		function closeWindow()
 		{
 			console.info("main.html::closeWindow");
-			results_url = "/mcdonalds/challenge/league_table.php?from_course=true";
+			results_url = "https://s3.amazonaws.com/peoplestuffelearning/120625_ken11110_till_game/mcdonalds/challenge/league_table.php?from_course=true";
 			window.opener.parent ? window.opener.parent.location.href = results_url : window.opener.location.href = results_url;
 			top.window.close();	
 		}
@@ -54,7 +54,7 @@
 		</div>
 		<script type="text/javascript">
 			var flashvars = {
-				serverPath: "/mcdonalds/challenge/add_score.php",
+				serverPath: "https://s3.amazonaws.com/peoplestuffelearning/120625_ken11110_till_game/mcdonalds/challenge/add_score.php",
 				usingLMS: "false"
 			};
 		
@@ -67,7 +67,7 @@
 				id: "Base",
 				name: "Base"
 			};
-			swfobject.embedSWF("main.swf", "flashContent", "995", "650", "10.0.12", "express_install.swf", flashvars, params, attributes);
+			swfobject.embedSWF("https://s3.amazonaws.com/peoplestuffelearning/120625_ken11110_till_game/main.swf", "flashContent", "995", "650", "10.0.12", "https://s3.amazonaws.com/peoplestuffelearning/120625_ken11110_till_game/express_install.swf", flashvars, params, attributes);
 		</script>
 	</body>
 </html>
