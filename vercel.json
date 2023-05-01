@@ -1,7 +1,7 @@
 {
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/:match*",
+      "source": "/",
       "destination": "/main.html"
     }
   ]
